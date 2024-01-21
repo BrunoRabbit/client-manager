@@ -2,7 +2,9 @@ Projeto feito com ❤️ para concorrer a uma vaga para a empresa Grupo Igniçã
 
 # ClientManager
 
-Projeto simples feito utilizando Flutter e alguns packages externos para gerencia de estado
+Projeto simples feito utilizando Flutter e alguns packages externos para gerencia de estado.
+
+**Nota:** O projeto suporta apenas android
 
 ## Etapas para iniciar o projeto
 
