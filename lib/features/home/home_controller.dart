@@ -15,7 +15,7 @@ class HomeController extends ChangeNotifier {
   final service = ClientService();
 
   // HttpResponse
-  void searchClient(String text) async {
+  Future<void> searchClient(String text) async {
     final completer = Completer<HttpResponse>();
 
     _debouncer.run(() async {
