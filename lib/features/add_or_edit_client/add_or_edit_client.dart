@@ -193,6 +193,7 @@ class _AddOrEditClientState extends State<AddOrEditClient> {
   _handleDeleteClient(HomeController controller) async {
     final response = await controller.removeClient(widget.clientModel!.id!);
 
+    controller.selectedTags.clear();
     if (!mounted) return;
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -229,6 +230,7 @@ class _AddOrEditClientState extends State<AddOrEditClient> {
 
         Navigator.of(context).pop();
         FocusScope.of(context).unfocus();
+        controller.selectedTags.clear();
       } else {
         if (!mounted) return;
         ScaffoldMessenger.of(context).showSnackBar(

@@ -51,7 +51,7 @@ class HomeController extends ChangeNotifier {
 
   Future<HttpResponse> removeClient(int id) async {
     final response = await service.removeClient(id);
-    
+
     if (response.statusCode == 200) {
       clients.removeWhere((client) => client.id == id);
       notifyListeners();
