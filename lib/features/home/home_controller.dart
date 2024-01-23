@@ -54,6 +54,7 @@ class HomeController extends ChangeNotifier {
 
     if (response.statusCode == 200) {
       clients.removeWhere((client) => client.id == id);
+      searchResult.removeWhere((client) => client.id == id);
       notifyListeners();
     }
 
@@ -78,6 +79,7 @@ class HomeController extends ChangeNotifier {
 
     if (response.statusCode == 200) {
       clients[indexList] = ClientModel.fromMap(response.data);
+      searchResult[indexList] = ClientModel.fromMap(response.data);
       notifyListeners();
     }
 
